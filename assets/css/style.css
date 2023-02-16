@@ -1,0 +1,110 @@
+@import url(../css/reset.css);
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header header header header"
+                        "nav main main main main"
+                        "nav main main main main"
+                        "nav main main main main"
+                        "footer footer footer footer footer";
+}
+header {
+    grid-area: header;
+    width: 100%;
+    height: 50px;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+header section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header .header {
+    padding: 25%;
+}
+header .header:hover {
+    background-color: rgb(228, 228, 228);
+    border-radius: 50%;
+}
+header .search {
+    justify-content: center;
+}
+header .search input {
+    min-width: 30%;
+    min-height: 2rem;
+    border: 1px solid black;
+}
+header .search figure {
+    border: 1px solid black;
+    background-color: rgb(228, 228, 228);   
+}
+header .search figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+nav {
+    grid-area: nav;
+    padding-left: 2rem;
+}
+nav ul li{
+    width: 11rem;
+    display: grid;
+    grid-template: 1fr / 1.5rem 1fr;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    padding: 0.5rem;
+}
+nav ul li:hover {
+    background-color: rgb(235, 235, 235);
+    border-radius: 2rem;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 2rem;
+    padding: 1rem;
+}
+main a {
+    width: 15rem;
+}
+main .video {
+    height: 9rem;
+}
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main div {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    padding-top: 1rem;
+}
+main .logo {
+    height: 2.5rem;
+}
+main span {
+    padding-left: 0.5rem;
+}
+footer {
+    grid-area: footer;
+    padding: 2rem;
+    border-top: 1px dashed;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    justify-items: center;
+}
+footer a{
+    height: 2rem;
+}
+footer img{
+    height: 100%;
+}
